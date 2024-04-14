@@ -1,0 +1,63 @@
+/* Стили для модального окна */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1; /* Поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Добавление прокрутки при необходимости */
+    background-color: rgba(0,0,0,0.4); /* Черный полупрозрачный фон */
+}
+
+/* Контейнер содержимого модального окна */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Отступ сверху и снизу, автоматическое выравнивание по горизонтали */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%; /* Ширина контейнера */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Тень */
+}
+
+/* Заголовок модального окна */
+.modal-content h2 {
+    margin-top: 0; /* Убираем верхний отступ для заголовка */
+    color: #333; /* Цвет текста */
+}
+
+/* Текст в модальном окне */
+.modal-content p {
+    margin-bottom: 15px; /* Нижний отступ */
+    line-height: 1.5; /* Межстрочный интервал */
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+#open-modal {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(16, 16, 16, 1);
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    transition: 0.3s; /* Плавное изменение цвета при наведении */
+    height: 42px;
+    border-radius: 42px;
+}
+
+.close:hover,
+.close:focus {
+    color: #333; /* Изменение цвета при наведении */
+    text-decoration: none;
+    cursor: pointer;
+}
